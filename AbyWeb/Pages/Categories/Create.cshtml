@@ -7,13 +7,16 @@
 			<h2 class="text-primary pl-3">Create Category</h2>
 			<hr />
 		</div>
+		<div asp-validation-summary="All"></div>
 		<div class="mb-3">
 			<label asp-for="@Model.Category.Name"></label> />
 			<input asp-for="@Model.Category.Name" class="form-contorl"/>
+			<span asp-validation-for="Category.Name" class="text-warning"></span>
 		</div>
 		<div class="mb-3">
 			<label asp-for="@Model.Category.DisplayOrder"></label> />
 			<input asp-for="@Model.Category.DisplayOrder" class="form-contorl"/>
+			<span asp-validation-for="Category.DisplayOrder" class="text-warning"></span>
 		</div>
 		<button type="submit" class="btn btn-primary" style="width: 150px;">Create</button>
 	</div>
