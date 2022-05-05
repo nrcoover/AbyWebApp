@@ -38,6 +38,7 @@ namespace AbyWeb.Pages.Categories
             {
                 _db.Categories.Update(Category);
                 await _db.SaveChangesAsync();
+                TempData["success"] = "Your Category has been updated!";
                 return RedirectToPage("Index");
             }
             return Page();

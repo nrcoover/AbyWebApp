@@ -34,6 +34,7 @@ namespace AbyWeb.Pages.Categories
             {
                 _db.Categories.Remove(categoryFromDb);
                 await _db.SaveChangesAsync();
+                TempData["success"] = "Your Category has been deleted!";
                 return RedirectToPage("Index");
             }
             return Page();
